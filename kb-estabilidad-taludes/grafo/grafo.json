@@ -1,0 +1,1620 @@
+{
+ "nodos": [
+  {
+   "id": "kb",
+   "nombre": "Estabilidad de taludes 2D por equilibrio límite (clon Slide2)",
+   "tipo": "dominio",
+   "nivel": 0,
+   "doc": "README.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "fisica",
+   "nombre": "Fundamentos físicos",
+   "tipo": "area",
+   "nivel": 1,
+   "doc": "teoria/01-fundamentos-fisicos.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "matematica",
+   "nombre": "Fundamentos matemáticos y numéricos",
+   "tipo": "area",
+   "nivel": 1,
+   "doc": "teoria/02-fundamentos-matematicos.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "lem",
+   "nombre": "Métodos de equilibrio límite (dovelas)",
+   "tipo": "area",
+   "nivel": 1,
+   "doc": "teoria/03-marco-comun-dovelas.md",
+   "estado": "verificado"
+  },
+  {
+   "id": "busqueda",
+   "nombre": "Búsqueda de la superficie crítica",
+   "tipo": "area",
+   "nivel": 1,
+   "doc": "teoria/08-busqueda-superficie-critica.md",
+   "estado": "verificado"
+  },
+  {
+   "id": "slide2_funciones",
+   "nombre": "Mapa funcional de Slide2 (backlog)",
+   "tipo": "area",
+   "nivel": 1,
+   "doc": "teoria/09-mapa-funciones-slide2.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "practica",
+   "nombre": "Práctica: arquitectura, verificación, trampas",
+   "tipo": "area",
+   "nivel": 1,
+   "doc": "practica/10-arquitectura-clon-agentico.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "fuentes",
+   "nombre": "Fuentes accesibles / no accesibles",
+   "tipo": "area",
+   "nivel": 1,
+   "doc": "fuentes/fuentes.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "equilibrio_limite",
+   "nombre": "Equilibrio límite 2D (rígido-plástico)",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#1-equilibrio-límite-y-factor-de-seguridad",
+   "estado": "documentado"
+  },
+  {
+   "id": "factor_seguridad",
+   "nombre": "F por reducción uniforme de resistencia",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#1-equilibrio-límite-y-factor-de-seguridad",
+   "estado": "documentado"
+  },
+  {
+   "id": "tensiones_efectivas",
+   "nombre": "Tensiones efectivas / totales",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#2-tensiones-efectivas-y-totales",
+   "estado": "documentado"
+  },
+  {
+   "id": "presion_poros",
+   "nombre": "Presión de poros (piezo, Hu, ru, malla, EF)",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#3-presión-de-poros-opciones-de-slide2-y-equivalentes",
+   "estado": "verificado"
+  },
+  {
+   "id": "resistencia_mc",
+   "nombre": "Mohr-Coulomb y no drenado",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#4-modelos-de-resistencia-catálogo-de-slide2",
+   "estado": "verificado"
+  },
+  {
+   "id": "resistencia_no_lineal",
+   "nombre": "Hoek-Brown, potencia, Barton-Bandis, anisotropía",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#4-modelos-de-resistencia-catálogo-de-slide2",
+   "estado": "documentado"
+  },
+  {
+   "id": "cargas",
+   "nombre": "Cargas distribuidas, lineales, agua libre",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#5-cargas",
+   "estado": "documentado"
+  },
+  {
+   "id": "sismo",
+   "nombre": "Sismo pseudoestático kh/kv, Newmark",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#5-cargas",
+   "estado": "documentado"
+  },
+  {
+   "id": "soportes",
+   "nombre": "Soportes activos/pasivos",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#6-refuerzos-y-soportes-catálogo-de-slide2",
+   "estado": "documentado"
+  },
+  {
+   "id": "grieta",
+   "nombre": "Grieta de tracción",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#3-presión-de-poros-opciones-de-slide2-y-equivalentes",
+   "estado": "documentado"
+  },
+  {
+   "id": "desembalse",
+   "nombre": "Desembalse rápido (Corps, L-K, DWW)",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/01-fundamentos-fisicos.md#3-presión-de-poros-opciones-de-slide2-y-equivalentes",
+   "estado": "pendiente"
+  },
+  {
+   "id": "geometria",
+   "nombre": "Geometría computacional (polilíneas, círculos, recortes)",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/02-fundamentos-matematicos.md#1-geometría-computacional-lo-que-más-código-consume-en-un-clon",
+   "estado": "verificado"
+  },
+  {
+   "id": "dovelado",
+   "nombre": "Dovelado con quiebres obligatorios",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/02-fundamentos-matematicos.md#1-geometría-computacional-lo-que-más-código-consume-en-un-clon",
+   "estado": "verificado"
+  },
+  {
+   "id": "recurrencia",
+   "nombre": "Recurrencia de fuerzas entre dovelas",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/02-fundamentos-matematicos.md#2-álgebra-lineal-y-recurrencias",
+   "estado": "verificado"
+  },
+  {
+   "id": "raices",
+   "nombre": "Raíces no lineales (punto fijo, Brent, polos)",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/02-fundamentos-matematicos.md#3-ecuaciones-no-lineales",
+   "estado": "verificado"
+  },
+  {
+   "id": "newton_2d",
+   "nombre": "Newton 2D en (F, λ)",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/05-spencer.md#2-formulación-q-utexas-s-g-wright--la-más-directa-de-programar",
+   "estado": "documentado"
+  },
+  {
+   "id": "optimizacion",
+   "nombre": "Optimización directa y metaheurísticas",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/02-fundamentos-matematicos.md#4-optimización-búsqueda-de-la-superficie-crítica",
+   "estado": "verificado"
+  },
+  {
+   "id": "probabilidad",
+   "nombre": "Monte Carlo, LHS, Pf, índice β",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/02-fundamentos-matematicos.md#5-probabilidad-y-confiabilidad-módulo-probabilístico-de-slide2",
+   "estado": "documentado"
+  },
+  {
+   "id": "incognitas",
+   "nombre": "Balance de incógnitas (6n-2 vs 4n)",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/03-marco-comun-dovelas.md#3-balance-de-incógnitas-por-qué-hacen-falta-hipótesis",
+   "estado": "documentado"
+  },
+  {
+   "id": "marco_dovelas",
+   "nombre": "Equilibrio de una dovela (ecuación madre)",
+   "tipo": "ecuacion",
+   "nivel": 2,
+   "doc": "teoria/03-marco-comun-dovelas.md#4-equilibrio-de-una-dovela-derivación-usada-en-el-código",
+   "estado": "verificado"
+  },
+  {
+   "id": "equilibrio_global",
+   "nombre": "F_f (fuerzas) y F_m (momentos)",
+   "tipo": "ecuacion",
+   "nivel": 2,
+   "doc": "teoria/03-marco-comun-dovelas.md#5-equilibrio-global",
+   "estado": "verificado"
+  },
+  {
+   "id": "gle",
+   "nombre": "GLE: X = λ f(x) E",
+   "tipo": "metodo",
+   "nivel": 2,
+   "doc": "teoria/03-marco-comun-dovelas.md#6-la-familia-gle-cada-método-es-un-caso-particular",
+   "estado": "verificado"
+  },
+  {
+   "id": "funcion_entre_dovelas",
+   "nombre": "Función entre dovelas f(x)",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/06-morgenstern-price-gle.md#4-función-entre-dovelas-fx",
+   "estado": "verificado"
+  },
+  {
+   "id": "admisibilidad",
+   "nombre": "Admisibilidad (mα≥0.2, N'≥0, E>0, empujes)",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/03-marco-comun-dovelas.md#8-controles-de-admisibilidad-obligatorios-antes-de-reportar-f",
+   "estado": "verificado"
+  },
+  {
+   "id": "ordinario",
+   "nombre": "Ordinario / Fellenius",
+   "tipo": "metodo",
+   "nivel": 3,
+   "doc": "teoria/07-otros-metodos.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "bishop",
+   "nombre": "Bishop simplificado",
+   "tipo": "metodo",
+   "nivel": 3,
+   "doc": "teoria/07-otros-metodos.md",
+   "estado": "verificado"
+  },
+  {
+   "id": "janbu_simplificado",
+   "nombre": "Janbu simplificado",
+   "tipo": "metodo",
+   "nivel": 3,
+   "doc": "teoria/04-janbu.md#2-janbu-simplificado",
+   "estado": "verificado"
+  },
+  {
+   "id": "janbu_corregido",
+   "nombre": "Janbu corregido (f0)",
+   "tipo": "metodo",
+   "nivel": 3,
+   "doc": "teoria/04-janbu.md#3-janbu-corregido",
+   "estado": "verificado"
+  },
+  {
+   "id": "janbu_generalizado",
+   "nombre": "Janbu generalizado (GPS, \"Janbu\" de GEO5)",
+   "tipo": "metodo",
+   "nivel": 3,
+   "doc": "teoria/04-janbu.md#4-janbu-generalizado-gps--base-para-clonar-geo5",
+   "estado": "pendiente"
+  },
+  {
+   "id": "corps_lk",
+   "nombre": "Corps #1/#2 y Lowe-Karafiath",
+   "tipo": "metodo",
+   "nivel": 3,
+   "doc": "teoria/07-otros-metodos.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "spencer",
+   "nombre": "Spencer",
+   "tipo": "metodo",
+   "nivel": 3,
+   "doc": "teoria/05-spencer.md",
+   "estado": "verificado"
+  },
+  {
+   "id": "morgenstern_price",
+   "nombre": "Morgenstern-Price",
+   "tipo": "metodo",
+   "nivel": 3,
+   "doc": "teoria/06-morgenstern-price-gle.md",
+   "estado": "verificado"
+  },
+  {
+   "id": "mp_1965_continuo",
+   "nombre": "M-P 1965 formulación diferencial original",
+   "tipo": "ecuacion",
+   "nivel": 3,
+   "doc": "teoria/06-morgenstern-price-gle.md#2-formulación-continua-original-1965--estructura",
+   "estado": "pendiente"
+  },
+  {
+   "id": "zhu_2005",
+   "nombre": "Algoritmo conciso de Zhu et al. (2005)",
+   "tipo": "algoritmo",
+   "nivel": 3,
+   "doc": "teoria/06-morgenstern-price-gle.md#5-algoritmo-conciso-de-zhu-lee-qian--chen-2005",
+   "estado": "pendiente"
+  },
+  {
+   "id": "sarma",
+   "nombre": "Sarma (dovelas inclinadas, Kc)",
+   "tipo": "metodo",
+   "nivel": 3,
+   "doc": "teoria/07-otros-metodos.md",
+   "estado": "pendiente"
+  },
+  {
+   "id": "itfm",
+   "nombre": "ITFM / Shahunyants (GEO5)",
+   "tipo": "metodo",
+   "nivel": 3,
+   "doc": "teoria/07-otros-metodos.md",
+   "estado": "pendiente"
+  },
+  {
+   "id": "filtros",
+   "nombre": "Filtros y límites de superficie",
+   "tipo": "concepto",
+   "nivel": 2,
+   "doc": "teoria/08-busqueda-superficie-critica.md#1-planteamiento",
+   "estado": "documentado"
+  },
+  {
+   "id": "grid_search",
+   "nombre": "Grid Search (centros × radios)",
+   "tipo": "algoritmo",
+   "nivel": 3,
+   "doc": "teoria/08-busqueda-superficie-critica.md#21-grid-search-malla-de-centros--radios",
+   "estado": "verificado"
+  },
+  {
+   "id": "slope_search",
+   "nombre": "Slope Search",
+   "tipo": "algoritmo",
+   "nivel": 3,
+   "doc": "teoria/08-busqueda-superficie-critica.md#22-slope-search",
+   "estado": "documentado"
+  },
+  {
+   "id": "auto_refine",
+   "nombre": "Auto Refine (circular y no circular)",
+   "tipo": "algoritmo",
+   "nivel": 3,
+   "doc": "teoria/08-busqueda-superficie-critica.md#23-auto-refine-search-circular",
+   "estado": "documentado"
+  },
+  {
+   "id": "block_search",
+   "nombre": "Block Search",
+   "tipo": "algoritmo",
+   "nivel": 3,
+   "doc": "teoria/08-busqueda-superficie-critica.md#31-block-search-bloques-activocentralpasivo",
+   "estado": "documentado"
+  },
+  {
+   "id": "path_search",
+   "nombre": "Path Search (XSTABL)",
+   "tipo": "algoritmo",
+   "nivel": 3,
+   "doc": "teoria/08-busqueda-superficie-critica.md#32-path-search-xstabl-irregular-surface-search",
+   "estado": "documentado"
+  },
+  {
+   "id": "simulated_annealing",
+   "nombre": "Recocido simulado híbrido (Su 2009)",
+   "tipo": "algoritmo",
+   "nivel": 3,
+   "doc": "teoria/08-busqueda-superficie-critica.md#33-simulated-annealing-híbrido-slide2-su-2009-u-waterloo",
+   "estado": "documentado"
+  },
+  {
+   "id": "particle_swarm",
+   "nombre": "Enjambre de partículas (uni/multimodal)",
+   "tipo": "algoritmo",
+   "nivel": 3,
+   "doc": "teoria/08-busqueda-superficie-critica.md#34-particle-swarm-slide2",
+   "estado": "documentado"
+  },
+  {
+   "id": "cuckoo_search",
+   "nombre": "Búsqueda cuco (Lévy)",
+   "tipo": "algoritmo",
+   "nivel": 3,
+   "doc": "teoria/08-busqueda-superficie-critica.md#35-cuckoo-search-slide2-yang--deb-2009-gandomi-et-al",
+   "estado": "pendiente"
+  },
+  {
+   "id": "optimize_surfaces",
+   "nombre": "Optimize Surfaces (Greco) / GEO5 vértices",
+   "tipo": "algoritmo",
+   "nivel": 3,
+   "doc": "teoria/08-busqueda-superficie-critica.md#37-optimize-surfaces-slide2-y-optimización-de-geo5",
+   "estado": "verificado"
+  },
+  {
+   "id": "arquitectura",
+   "nombre": "Arquitectura del clon + MCP para agentes",
+   "tipo": "practica",
+   "nivel": 4,
+   "doc": "practica/10-arquitectura-clon-agentico.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "verificacion",
+   "nombre": "Estrategia y resultados de verificación",
+   "tipo": "practica",
+   "nivel": 4,
+   "doc": "practica/11-verificacion.md",
+   "estado": "verificado"
+  },
+  {
+   "id": "trampas",
+   "nombre": "Trampas de implementación medidas",
+   "tipo": "practica",
+   "nivel": 4,
+   "doc": "practica/12-trampas-de-implementacion.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "lem_ref",
+   "nombre": "Solver de referencia (este repo)",
+   "tipo": "implementacion",
+   "nivel": 4,
+   "doc": "codigo/lem_ref.py",
+   "estado": "verificado"
+  },
+  {
+   "id": "xslope",
+   "nombre": "xslope (Apache-2.0)",
+   "tipo": "implementacion",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "ogr",
+   "nombre": "OGR-Slip2D (AGPL-3.0, MCP)",
+   "tipo": "implementacion",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "bm_fk1977",
+   "nombre": "Fredlund & Krahn 1977 = Slide2 VP#21",
+   "tipo": "benchmark",
+   "nivel": 4,
+   "doc": "practica/11-verificacion.md",
+   "estado": "verificado"
+  },
+  {
+   "id": "bm_acads1a",
+   "nombre": "ACADS 1(a) = Slide2 VP#1",
+   "tipo": "benchmark",
+   "nivel": 4,
+   "doc": "practica/11-verificacion.md",
+   "estado": "verificado"
+  },
+  {
+   "id": "bm_slide2",
+   "nombre": "Manual de verificación Slide2 (111 VP)",
+   "tipo": "benchmark",
+   "nivel": 4,
+   "doc": "practica/11-verificacion.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "bm_talbingo",
+   "nombre": "Talbingo VP#6 (raíz espuria)",
+   "tipo": "benchmark",
+   "nivel": 4,
+   "doc": "practica/11-verificacion.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "src_mp1965",
+   "nombre": "Morgenstern & Price 1965 (abierto, red bloqueada)",
+   "tipo": "fuente",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "pendiente"
+  },
+  {
+   "id": "src_fk1977",
+   "nombre": "Fredlund & Krahn 1977 (abierto, red bloqueada)",
+   "tipo": "fuente",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "pendiente"
+  },
+  {
+   "id": "src_spencer1967",
+   "nombre": "Spencer 1967 (pago)",
+   "tipo": "fuente",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "pendiente"
+  },
+  {
+   "id": "src_janbu1973",
+   "nombre": "Janbu 1973 (pago)",
+   "tipo": "fuente",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "pendiente"
+  },
+  {
+   "id": "src_zhu2005",
+   "nombre": "Zhu et al. 2005 (abierto, red bloqueada)",
+   "tipo": "fuente",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "pendiente"
+  },
+  {
+   "id": "src_utexas",
+   "nombre": "UTEXAS2 App. A Wright (vía xslope)",
+   "tipo": "fuente",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "src_su2009",
+   "nombre": "Su 2009 HSA (vía OGR)",
+   "tipo": "fuente",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "documentado"
+  },
+  {
+   "id": "src_geo5",
+   "nombre": "Ayuda GEO5 (ecuaciones en imagen)",
+   "tipo": "fuente",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "pendiente"
+  },
+  {
+   "id": "src_slide2_help",
+   "nombre": "Ayuda Slide2 (vía OGR/xslope)",
+   "tipo": "fuente",
+   "nivel": 4,
+   "doc": "fuentes/fuentes.md",
+   "estado": "documentado"
+  }
+ ],
+ "aristas": [
+  {
+   "origen": "fisica",
+   "relacion": "parte_de",
+   "destino": "kb"
+  },
+  {
+   "origen": "matematica",
+   "relacion": "parte_de",
+   "destino": "kb"
+  },
+  {
+   "origen": "lem",
+   "relacion": "parte_de",
+   "destino": "kb"
+  },
+  {
+   "origen": "busqueda",
+   "relacion": "parte_de",
+   "destino": "kb"
+  },
+  {
+   "origen": "slide2_funciones",
+   "relacion": "parte_de",
+   "destino": "kb"
+  },
+  {
+   "origen": "practica",
+   "relacion": "parte_de",
+   "destino": "kb"
+  },
+  {
+   "origen": "fuentes",
+   "relacion": "parte_de",
+   "destino": "kb"
+  },
+  {
+   "origen": "equilibrio_limite",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "factor_seguridad",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "tensiones_efectivas",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "presion_poros",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "resistencia_mc",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "resistencia_no_lineal",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "cargas",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "sismo",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "soportes",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "grieta",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "desembalse",
+   "relacion": "parte_de",
+   "destino": "fisica"
+  },
+  {
+   "origen": "geometria",
+   "relacion": "parte_de",
+   "destino": "matematica"
+  },
+  {
+   "origen": "dovelado",
+   "relacion": "parte_de",
+   "destino": "matematica"
+  },
+  {
+   "origen": "recurrencia",
+   "relacion": "parte_de",
+   "destino": "matematica"
+  },
+  {
+   "origen": "raices",
+   "relacion": "parte_de",
+   "destino": "matematica"
+  },
+  {
+   "origen": "newton_2d",
+   "relacion": "parte_de",
+   "destino": "matematica"
+  },
+  {
+   "origen": "optimizacion",
+   "relacion": "parte_de",
+   "destino": "matematica"
+  },
+  {
+   "origen": "probabilidad",
+   "relacion": "parte_de",
+   "destino": "matematica"
+  },
+  {
+   "origen": "incognitas",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "marco_dovelas",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "equilibrio_global",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "gle",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "funcion_entre_dovelas",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "admisibilidad",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "ordinario",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "bishop",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "janbu_simplificado",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "janbu_corregido",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "janbu_generalizado",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "corps_lk",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "spencer",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "morgenstern_price",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "mp_1965_continuo",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "zhu_2005",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "sarma",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "itfm",
+   "relacion": "parte_de",
+   "destino": "lem"
+  },
+  {
+   "origen": "filtros",
+   "relacion": "parte_de",
+   "destino": "busqueda"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "parte_de",
+   "destino": "busqueda"
+  },
+  {
+   "origen": "slope_search",
+   "relacion": "parte_de",
+   "destino": "busqueda"
+  },
+  {
+   "origen": "auto_refine",
+   "relacion": "parte_de",
+   "destino": "busqueda"
+  },
+  {
+   "origen": "block_search",
+   "relacion": "parte_de",
+   "destino": "busqueda"
+  },
+  {
+   "origen": "path_search",
+   "relacion": "parte_de",
+   "destino": "busqueda"
+  },
+  {
+   "origen": "simulated_annealing",
+   "relacion": "parte_de",
+   "destino": "busqueda"
+  },
+  {
+   "origen": "particle_swarm",
+   "relacion": "parte_de",
+   "destino": "busqueda"
+  },
+  {
+   "origen": "cuckoo_search",
+   "relacion": "parte_de",
+   "destino": "busqueda"
+  },
+  {
+   "origen": "optimize_surfaces",
+   "relacion": "parte_de",
+   "destino": "busqueda"
+  },
+  {
+   "origen": "arquitectura",
+   "relacion": "parte_de",
+   "destino": "practica"
+  },
+  {
+   "origen": "verificacion",
+   "relacion": "parte_de",
+   "destino": "practica"
+  },
+  {
+   "origen": "trampas",
+   "relacion": "parte_de",
+   "destino": "practica"
+  },
+  {
+   "origen": "lem_ref",
+   "relacion": "parte_de",
+   "destino": "practica"
+  },
+  {
+   "origen": "xslope",
+   "relacion": "parte_de",
+   "destino": "practica"
+  },
+  {
+   "origen": "ogr",
+   "relacion": "parte_de",
+   "destino": "practica"
+  },
+  {
+   "origen": "bm_fk1977",
+   "relacion": "parte_de",
+   "destino": "practica"
+  },
+  {
+   "origen": "bm_acads1a",
+   "relacion": "parte_de",
+   "destino": "practica"
+  },
+  {
+   "origen": "bm_slide2",
+   "relacion": "parte_de",
+   "destino": "practica"
+  },
+  {
+   "origen": "bm_talbingo",
+   "relacion": "parte_de",
+   "destino": "practica"
+  },
+  {
+   "origen": "src_mp1965",
+   "relacion": "parte_de",
+   "destino": "fuentes"
+  },
+  {
+   "origen": "src_fk1977",
+   "relacion": "parte_de",
+   "destino": "fuentes"
+  },
+  {
+   "origen": "src_spencer1967",
+   "relacion": "parte_de",
+   "destino": "fuentes"
+  },
+  {
+   "origen": "src_janbu1973",
+   "relacion": "parte_de",
+   "destino": "fuentes"
+  },
+  {
+   "origen": "src_zhu2005",
+   "relacion": "parte_de",
+   "destino": "fuentes"
+  },
+  {
+   "origen": "src_utexas",
+   "relacion": "parte_de",
+   "destino": "fuentes"
+  },
+  {
+   "origen": "src_su2009",
+   "relacion": "parte_de",
+   "destino": "fuentes"
+  },
+  {
+   "origen": "src_geo5",
+   "relacion": "parte_de",
+   "destino": "fuentes"
+  },
+  {
+   "origen": "src_slide2_help",
+   "relacion": "parte_de",
+   "destino": "fuentes"
+  },
+  {
+   "origen": "factor_seguridad",
+   "relacion": "requiere",
+   "destino": "equilibrio_limite"
+  },
+  {
+   "origen": "resistencia_mc",
+   "relacion": "requiere",
+   "destino": "tensiones_efectivas"
+  },
+  {
+   "origen": "tensiones_efectivas",
+   "relacion": "requiere",
+   "destino": "presion_poros"
+  },
+  {
+   "origen": "dovelado",
+   "relacion": "requiere",
+   "destino": "geometria"
+  },
+  {
+   "origen": "marco_dovelas",
+   "relacion": "requiere",
+   "destino": "dovelado"
+  },
+  {
+   "origen": "marco_dovelas",
+   "relacion": "requiere",
+   "destino": "factor_seguridad"
+  },
+  {
+   "origen": "marco_dovelas",
+   "relacion": "requiere",
+   "destino": "resistencia_mc"
+  },
+  {
+   "origen": "marco_dovelas",
+   "relacion": "requiere",
+   "destino": "cargas"
+  },
+  {
+   "origen": "marco_dovelas",
+   "relacion": "requiere",
+   "destino": "sismo"
+  },
+  {
+   "origen": "marco_dovelas",
+   "relacion": "requiere",
+   "destino": "incognitas"
+  },
+  {
+   "origen": "marco_dovelas",
+   "relacion": "requiere",
+   "destino": "recurrencia"
+  },
+  {
+   "origen": "equilibrio_global",
+   "relacion": "requiere",
+   "destino": "marco_dovelas"
+  },
+  {
+   "origen": "gle",
+   "relacion": "requiere",
+   "destino": "equilibrio_global"
+  },
+  {
+   "origen": "gle",
+   "relacion": "requiere",
+   "destino": "funcion_entre_dovelas"
+  },
+  {
+   "origen": "gle",
+   "relacion": "requiere",
+   "destino": "raices"
+  },
+  {
+   "origen": "gle",
+   "relacion": "requiere",
+   "destino": "admisibilidad"
+  },
+  {
+   "origen": "janbu_simplificado",
+   "relacion": "requiere",
+   "destino": "equilibrio_global"
+  },
+  {
+   "origen": "janbu_simplificado",
+   "relacion": "requiere",
+   "destino": "raices"
+  },
+  {
+   "origen": "janbu_simplificado",
+   "relacion": "requiere",
+   "destino": "admisibilidad"
+  },
+  {
+   "origen": "bishop",
+   "relacion": "requiere",
+   "destino": "equilibrio_global"
+  },
+  {
+   "origen": "janbu_generalizado",
+   "relacion": "requiere",
+   "destino": "janbu_simplificado"
+  },
+  {
+   "origen": "spencer",
+   "relacion": "requiere",
+   "destino": "newton_2d"
+  },
+  {
+   "origen": "morgenstern_price",
+   "relacion": "requiere",
+   "destino": "gle"
+  },
+  {
+   "origen": "spencer",
+   "relacion": "requiere",
+   "destino": "gle"
+  },
+  {
+   "origen": "resistencia_no_lineal",
+   "relacion": "requiere",
+   "destino": "resistencia_mc"
+  },
+  {
+   "origen": "soportes",
+   "relacion": "requiere",
+   "destino": "cargas"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "requiere",
+   "destino": "filtros"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "requiere",
+   "destino": "geometria"
+  },
+  {
+   "origen": "optimize_surfaces",
+   "relacion": "requiere",
+   "destino": "optimizacion"
+  },
+  {
+   "origen": "simulated_annealing",
+   "relacion": "requiere",
+   "destino": "optimizacion"
+  },
+  {
+   "origen": "particle_swarm",
+   "relacion": "requiere",
+   "destino": "optimizacion"
+  },
+  {
+   "origen": "cuckoo_search",
+   "relacion": "requiere",
+   "destino": "optimizacion"
+  },
+  {
+   "origen": "block_search",
+   "relacion": "requiere",
+   "destino": "filtros"
+  },
+  {
+   "origen": "path_search",
+   "relacion": "requiere",
+   "destino": "filtros"
+  },
+  {
+   "origen": "auto_refine",
+   "relacion": "requiere",
+   "destino": "grid_search"
+  },
+  {
+   "origen": "arquitectura",
+   "relacion": "requiere",
+   "destino": "verificacion"
+  },
+  {
+   "origen": "verificacion",
+   "relacion": "requiere",
+   "destino": "trampas"
+  },
+  {
+   "origen": "desembalse",
+   "relacion": "requiere",
+   "destino": "presion_poros"
+  },
+  {
+   "origen": "probabilidad",
+   "relacion": "requiere",
+   "destino": "grid_search"
+  },
+  {
+   "origen": "janbu_simplificado",
+   "relacion": "caso_de",
+   "destino": "gle"
+  },
+  {
+   "origen": "bishop",
+   "relacion": "caso_de",
+   "destino": "gle"
+  },
+  {
+   "origen": "spencer",
+   "relacion": "caso_de",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "corps_lk",
+   "relacion": "caso_de",
+   "destino": "gle"
+  },
+  {
+   "origen": "janbu_corregido",
+   "relacion": "corrige",
+   "destino": "janbu_simplificado"
+  },
+  {
+   "origen": "zhu_2005",
+   "relacion": "resuelve",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "mp_1965_continuo",
+   "relacion": "resuelve",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "newton_2d",
+   "relacion": "resuelve",
+   "destino": "spencer"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "usa",
+   "destino": "janbu_corregido"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "usa",
+   "destino": "spencer"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "usa",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "slope_search",
+   "relacion": "usa",
+   "destino": "janbu_corregido"
+  },
+  {
+   "origen": "slope_search",
+   "relacion": "usa",
+   "destino": "spencer"
+  },
+  {
+   "origen": "slope_search",
+   "relacion": "usa",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "auto_refine",
+   "relacion": "usa",
+   "destino": "janbu_corregido"
+  },
+  {
+   "origen": "auto_refine",
+   "relacion": "usa",
+   "destino": "spencer"
+  },
+  {
+   "origen": "auto_refine",
+   "relacion": "usa",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "block_search",
+   "relacion": "usa",
+   "destino": "janbu_corregido"
+  },
+  {
+   "origen": "block_search",
+   "relacion": "usa",
+   "destino": "spencer"
+  },
+  {
+   "origen": "block_search",
+   "relacion": "usa",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "path_search",
+   "relacion": "usa",
+   "destino": "janbu_corregido"
+  },
+  {
+   "origen": "path_search",
+   "relacion": "usa",
+   "destino": "spencer"
+  },
+  {
+   "origen": "path_search",
+   "relacion": "usa",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "simulated_annealing",
+   "relacion": "usa",
+   "destino": "janbu_corregido"
+  },
+  {
+   "origen": "simulated_annealing",
+   "relacion": "usa",
+   "destino": "spencer"
+  },
+  {
+   "origen": "simulated_annealing",
+   "relacion": "usa",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "particle_swarm",
+   "relacion": "usa",
+   "destino": "janbu_corregido"
+  },
+  {
+   "origen": "particle_swarm",
+   "relacion": "usa",
+   "destino": "spencer"
+  },
+  {
+   "origen": "particle_swarm",
+   "relacion": "usa",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "cuckoo_search",
+   "relacion": "usa",
+   "destino": "janbu_corregido"
+  },
+  {
+   "origen": "cuckoo_search",
+   "relacion": "usa",
+   "destino": "spencer"
+  },
+  {
+   "origen": "cuckoo_search",
+   "relacion": "usa",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "optimize_surfaces",
+   "relacion": "usa",
+   "destino": "janbu_corregido"
+  },
+  {
+   "origen": "optimize_surfaces",
+   "relacion": "usa",
+   "destino": "spencer"
+  },
+  {
+   "origen": "optimize_surfaces",
+   "relacion": "usa",
+   "destino": "morgenstern_price"
+  },
+  {
+   "origen": "bishop",
+   "relacion": "valida_con",
+   "destino": "bm_fk1977"
+  },
+  {
+   "origen": "janbu_simplificado",
+   "relacion": "valida_con",
+   "destino": "bm_fk1977"
+  },
+  {
+   "origen": "janbu_corregido",
+   "relacion": "valida_con",
+   "destino": "bm_fk1977"
+  },
+  {
+   "origen": "spencer",
+   "relacion": "valida_con",
+   "destino": "bm_fk1977"
+  },
+  {
+   "origen": "morgenstern_price",
+   "relacion": "valida_con",
+   "destino": "bm_fk1977"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "valida_con",
+   "destino": "bm_acads1a"
+  },
+  {
+   "origen": "optimize_surfaces",
+   "relacion": "valida_con",
+   "destino": "bm_acads1a"
+  },
+  {
+   "origen": "admisibilidad",
+   "relacion": "valida_con",
+   "destino": "bm_talbingo"
+  },
+  {
+   "origen": "arquitectura",
+   "relacion": "valida_con",
+   "destino": "bm_slide2"
+  },
+  {
+   "origen": "morgenstern_price",
+   "relacion": "fuente",
+   "destino": "src_mp1965"
+  },
+  {
+   "origen": "mp_1965_continuo",
+   "relacion": "fuente",
+   "destino": "src_mp1965"
+  },
+  {
+   "origen": "gle",
+   "relacion": "fuente",
+   "destino": "src_fk1977"
+  },
+  {
+   "origen": "spencer",
+   "relacion": "fuente",
+   "destino": "src_spencer1967"
+  },
+  {
+   "origen": "spencer",
+   "relacion": "fuente",
+   "destino": "src_utexas"
+  },
+  {
+   "origen": "janbu_corregido",
+   "relacion": "fuente",
+   "destino": "src_janbu1973"
+  },
+  {
+   "origen": "janbu_generalizado",
+   "relacion": "fuente",
+   "destino": "src_janbu1973"
+  },
+  {
+   "origen": "janbu_generalizado",
+   "relacion": "fuente",
+   "destino": "src_geo5"
+  },
+  {
+   "origen": "zhu_2005",
+   "relacion": "fuente",
+   "destino": "src_zhu2005"
+  },
+  {
+   "origen": "simulated_annealing",
+   "relacion": "fuente",
+   "destino": "src_su2009"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "fuente",
+   "destino": "src_slide2_help"
+  },
+  {
+   "origen": "slope_search",
+   "relacion": "fuente",
+   "destino": "src_slide2_help"
+  },
+  {
+   "origen": "auto_refine",
+   "relacion": "fuente",
+   "destino": "src_slide2_help"
+  },
+  {
+   "origen": "block_search",
+   "relacion": "fuente",
+   "destino": "src_slide2_help"
+  },
+  {
+   "origen": "path_search",
+   "relacion": "fuente",
+   "destino": "src_slide2_help"
+  },
+  {
+   "origen": "particle_swarm",
+   "relacion": "fuente",
+   "destino": "src_slide2_help"
+  },
+  {
+   "origen": "cuckoo_search",
+   "relacion": "fuente",
+   "destino": "src_slide2_help"
+  },
+  {
+   "origen": "optimize_surfaces",
+   "relacion": "fuente",
+   "destino": "src_slide2_help"
+  },
+  {
+   "origen": "soportes",
+   "relacion": "fuente",
+   "destino": "src_slide2_help"
+  },
+  {
+   "origen": "funcion_entre_dovelas",
+   "relacion": "fuente",
+   "destino": "src_slide2_help"
+  },
+  {
+   "origen": "bishop",
+   "relacion": "implementado_en",
+   "destino": "lem_ref"
+  },
+  {
+   "origen": "janbu_simplificado",
+   "relacion": "implementado_en",
+   "destino": "lem_ref"
+  },
+  {
+   "origen": "janbu_corregido",
+   "relacion": "implementado_en",
+   "destino": "lem_ref"
+  },
+  {
+   "origen": "spencer",
+   "relacion": "implementado_en",
+   "destino": "lem_ref"
+  },
+  {
+   "origen": "morgenstern_price",
+   "relacion": "implementado_en",
+   "destino": "lem_ref"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "implementado_en",
+   "destino": "lem_ref"
+  },
+  {
+   "origen": "optimize_surfaces",
+   "relacion": "implementado_en",
+   "destino": "lem_ref"
+  },
+  {
+   "origen": "bishop",
+   "relacion": "implementado_en",
+   "destino": "xslope"
+  },
+  {
+   "origen": "janbu_corregido",
+   "relacion": "implementado_en",
+   "destino": "xslope"
+  },
+  {
+   "origen": "spencer",
+   "relacion": "implementado_en",
+   "destino": "xslope"
+  },
+  {
+   "origen": "morgenstern_price",
+   "relacion": "implementado_en",
+   "destino": "xslope"
+  },
+  {
+   "origen": "corps_lk",
+   "relacion": "implementado_en",
+   "destino": "xslope"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "implementado_en",
+   "destino": "xslope"
+  },
+  {
+   "origen": "desembalse",
+   "relacion": "implementado_en",
+   "destino": "xslope"
+  },
+  {
+   "origen": "probabilidad",
+   "relacion": "implementado_en",
+   "destino": "xslope"
+  },
+  {
+   "origen": "bishop",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "janbu_corregido",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "spencer",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "morgenstern_price",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "corps_lk",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "grid_search",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "slope_search",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "auto_refine",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "block_search",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "path_search",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "simulated_annealing",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "particle_swarm",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "optimize_surfaces",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "soportes",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "probabilidad",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  },
+  {
+   "origen": "desembalse",
+   "relacion": "implementado_en",
+   "destino": "ogr"
+  }
+ ]
+}
